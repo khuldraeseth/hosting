@@ -17,16 +17,16 @@ Diagnostics:
     CheckOptions:
       readability-identifier-naming.VariableCase: camelBack
   # clangd 14
-  UnusedIncludes: Strict
+  # UnusedIncludes: Strict
 
 Completion:
   AllScopes: No
 
 # clangd 14
-InlayHints:
-  Enabled: Yes
-  ParameterNames: Yes
-  DeducedTypes: Yes
+# InlayHints:
+#   Enabled: Yes
+#   ParameterNames: Yes
+#   DeducedTypes: Yes
 
 Hover:
   ShowAKA: Yes
