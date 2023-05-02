@@ -1,6 +1,6 @@
 # C/C++
 If:
-  PathMatch: [.*\.c, .*\.cc, .*\.cpp, .*\.cxx, .*\.h, .*\.hpp, .*\.inl]
+  PathMatch: [.*\.cc, .*\.cpp, .*\.cxx, .*\.hpp, .*\.inl, .*\.c, .*\.h]
 
 Diagnostics:
   ClangTidy:
@@ -16,7 +16,7 @@ Diagnostics:
       - bugprone-easily-swappable-parameters
     CheckOptions:
       readability-identifier-naming.VariableCase: camelBack
-# clangd 14
+  # clangd 14
   UnusedIncludes: Strict
 
 Completion:
@@ -33,14 +33,14 @@ Hover:
 ---
 # C
 If:
-  PathMatch: [.*\.c, .*\.h]
+  PathMatch: [.*\.c]
 
 CompileFlags:
   Add: [--std=c17, -Wall, -Wextra, -Wpedantic]
 ---
 # C++
 If:
-  PathMatch: [.*\.cc, .*\.cpp, .*\.cxx, .*\.hpp, .*\.inl]
+  PathMatch: [.*\.cc, .*\.cpp, .*\.cxx, .*\.hpp, .*\.inl, .*\.h]
 
 CompileFlags:
   Add: [--std=c++17, -Wall, -Wextra, -Wpedantic]
@@ -52,9 +52,9 @@ Diagnostics:
       - google-build-explicit-make-pair
       - google-default-arguments
       - google-readability-casting
-      - misc-redundant-expression
-      - misc-static-assert
-      - misc-throw-by-value-catch-by-reference
+      - misc-*
+    CheckOptions:
+      misc-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic: true
 ---
 # C source
 If:
@@ -65,7 +65,7 @@ CompileFlags:
 ---
 # C header
 If:
-  PathMatch: [.*\.h]
+  PathMatch: []
 
 CompileFlags:
   Add: [-xc-header]
@@ -79,8 +79,7 @@ CompileFlags:
 ---
 # C++ header
 If:
-  PathMatch: [.*\.hpp, .*\.inl]
+  PathMatch: [.*\.hpp, .*\.inl, .*\.h]
 
 CompileFlags:
   Add: [-xc++-header]
-...

@@ -25,11 +25,11 @@ AlwaysBreakTemplateDeclarations: Yes
 BinPackArguments: true
 BinPackParameters: true
 BitFieldColonSpacing: Both
-# BreakAfterAttributes: Leave    # clang-format 16
+# BreakAfterAttributes: Leave # clang-format 16
 BreakBeforeBinaryOperators: All
 BreakBeforeBraces: Attach
 BreakBeforeConceptDeclarations: true
-# BreakBeforeInlineAsmColon: Always    # clang-format 16
+# BreakBeforeInlineAsmColon: Always # clang-format 16
 BreakBeforeTernaryOperators: true
 BreakConstructorInitializers: BeforeComma
 BreakInheritanceList: BeforeComma
@@ -47,7 +47,7 @@ EmptyLineBeforeAccessModifier: Always
 FixNamespaceComments: true
 IncludeBlocks: Regroup
 IncludeCategories:
-  - Regex: '<.*/.*'
+  - Regex: "<.*/.*"
     Priority: 3
     SortPriority: 0
     CaseSensitive: false
@@ -55,16 +55,16 @@ IncludeCategories:
     Priority: 2
     SortPriority: 0
     CaseSensitive: false
-  - Regex: '^<.*'
+  - Regex: "^<.*"
     Priority: 1
     SortPriority: 0
     CaseSensitive: false
-  - Regex: '.*'
+  - Regex: ".*"
     Priority: 255
     SortPriority: 0
     CaseSensitive: false
-IncludeIsMainRegex: '([-_](test|unittest))?$'
-IncludeIsMainSourceRegex: ''
+IncludeIsMainRegex: "([-_](test|unittest))?$"
+IncludeIsMainSourceRegex: '\.inl'
 IndentAccessModifiers: false
 IndentCaseBlocks: false
 IndentCaseLabels: false
@@ -74,17 +74,17 @@ IndentPPDirectives: None
 IndentRequires: false
 IndentWidth: 4
 IndentWrappedFunctionNames: false
-# InsertBraces: true    # clang-format 15
-# InsertNewlineAtEOF: true    # clang-format 16
+# InsertBraces: true # clang-format 15
+# InsertNewlineAtEOF: true # clang-format 16
 KeepEmptyLinesAtTheStartOfBlocks: false
 LambdaBodyIndentation: Signature
-MacroBlockBegin: ''
-MacroBlockEnd: ''
+MacroBlockBegin: ""
+MacroBlockEnd: ""
 MaxEmptyLinesToKeep: 2
 NamespaceIndentation: None
 NamespaceMacros: []
 PPIndentWidth: -1
-PackConstructorInitializers: BinPack    # clang-format 14
+# PackConstructorInitializers: BinPack # clang-format 14
 PenaltyBreakAssignment: 2
 PenaltyBreakBeforeFirstCallParameter: 1
 PenaltyBreakComment: 300
@@ -95,8 +95,16 @@ PenaltyExcessCharacter: 1000000
 PenaltyReturnTypeOnItsOwnLine: 200
 PenaltyIndentedWhitespace: 0
 PointerAlignment: Left
-QualifierAlignment: Custom    # clang-format 14
-QualifierOrder: ['inline', 'static', 'constexpr', 'type', 'const', 'restrict', 'volatile']    # clang-format 14
+# QualifierAlignment: Custom # clang-format 14
+# QualifierOrder: [
+#     "inline",
+#     "static",
+#     "constexpr",
+#     "type",
+#     "const",
+#     "restrict",
+#     "volatile",
+#   ] # clang-format 14
 RawStringFormats:
   - Language: Cpp
     Delimiters:
@@ -105,15 +113,15 @@ RawStringFormats:
       - cpp
       - Cpp
       - CPP
-      - 'c++'
-      - 'C++'
-    CanonicalDelimiter: ''
+      - "c++"
+      - "C++"
+    CanonicalDelimiter: ""
 ReferenceAlignment: Pointer
 ReflowComments: true
-# RemoveSemicolon: false    # clang-format 16, see warning at https://clang.llvm.org/docs/ClangFormatStyleOptions.html
-# RequiresClausePosition: WithPreceding    # clang-format 15
-# RequiresExpressionIndentation: OuterScope    # clang-format 16
-SeparateDefinitionBlocks: Leave    # clang-format 14
+# RemoveSemicolon: false # clang-format 16, see warning at https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+# RequiresClausePosition: WithPreceding # clang-format 15
+# RequiresExpressionIndentation: OuterScope # clang-format 16
+# SeparateDefinitionBlocks: Leave # clang-format 14
 ShortNamespaceLines: 4
 SortIncludes: CaseSensitive
 SortUsingDeclarations: true
@@ -132,7 +140,7 @@ SpaceBeforeSquareBrackets: false
 SpaceInEmptyBlock: false
 SpaceInEmptyParentheses: false
 SpacesBeforeTrailingComments: 3
-SpacesInAngles:  Never
+SpacesInAngles: Never
 SpacesInCStyleCastParentheses: false
 SpacesInConditionalStatement: false
 SpacesInContainerLiterals: true
@@ -149,4 +157,3 @@ TypenameMacros: []
 UseCRLF: false
 UseTab: Never
 WhitespaceSensitiveMacros: []
-...
